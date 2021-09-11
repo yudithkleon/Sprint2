@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Principal from './Container/Principal';
-//import Router from './Routers/Router';
+import AppRou from './Routers/AppRou';
+//import Principal from './Container/Principal';
+
 
 
 ReactDOM.render(
-    <Principal/>,
-  document.getElementById('root')
+  <React.StrictMode>
+    <AppRou/>
+  </React.StrictMode>,
+    document.getElementById('root')
+
 );
 
