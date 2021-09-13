@@ -1,58 +1,55 @@
 import React, { Component } from 'react'
-import MostrarPeli from '../Componets/MostrarPeli'
-import Navegador from '../Componets/Navegador'
-import 'bootswatch/dist/solar/bootstrap.min.css'
-import { Div } from '../Style/Style'
-import CarouselFinal from '../Componets/CarouselFinal'
+import { Carousel } from 'react-bootstrap'
+import Buscador from './Buscador'
+import Navegador from './Navegador'
 
+const url = "http://localhost:3000/peliculas"
 
-const url = "https://appiyudith.herokuapp.com/peliculas"
-
-export default class Principal extends Component {
+export default class MostrarTariler extends Component {
 
     constructor() {
         super()
         this.state = {
             peli: [],
-            searchTerm:'',
-            error: '',
-          
+            searchTerm: '',
+            error: ''
         }
     }
 
     async componentDidMount() {
         const resp = await fetch(url)
         const data = await resp.json()
-        this.setState({ peli: data })
-     
+         this.setState({ peli: data })
+    
     }
 
     render() {
         const handleSubmit = async (e) => {
             e.preventDefault();
-            const resp = await fetch(url)
+              const resp = await fetch(url)
             const data = await resp.json()
             this.setState({ peli: data })
 
         }
+           
         return (
-            <Div className="todo">
+            <div>
                 <Navegador/>
-                <CarouselFinal/>
-               <div className="container row row-cols-1 row-cols-md-4 g-4 py-5 text-center ms-5">
-                    {
+              
+                 <div>
+                  {
                         this.state.peli.map((movie, index) => {
                             return (
-                                <MostrarPeli
+                                <Buscador
                                     key={index}
                                     movies={movie}
                                 />
                             )
                         })
                     }
-                </div>
-            </Div>
-
+                  </div>
+   
+            </div>
         )
-    }
+}
 }

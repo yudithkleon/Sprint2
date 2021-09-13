@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { H1 } from '../Style/Style'
 
 export default class Registro extends Component {
     render() {
         return (
             <div className="Registro py-5 container text-center">
                 <form className="form-signin" onSubmit={this.handleSutmit}>
-                    <h1 className="h3 mb-3 font-weight-normal">
+                    <H1 >
                         ¡Usuario de Peliculas!
-                    </h1>
+                    </H1>
                     <div className="fadeIn first ">
                         <img 
                         src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/logo-blockBuster_ttrdcc.png" 

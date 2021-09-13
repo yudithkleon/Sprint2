@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import md5 from 'md5'
 import {Link} from 'react-router-dom'
+import { Div } from '../Style/Style'
 import CrudUsuario from './CrudUsuario'
+import Navegador from './Navegador'
+
 const url = 'https://appiyudith.herokuapp.com/usuario'
 
 export default class Login extends Component {
@@ -49,10 +52,8 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <div>
-                <div>
-                <CrudUsuario/>
-                </div>
+            <Div>
+                <Navegador/>
                 <form className="form-signin" onSubmit={this.handleSubmit}>
                 <h1 className="h4 mb-3 font-weight-normal">
                     Inicio de sesión
@@ -86,14 +87,14 @@ export default class Login extends Component {
                 </button>
 
                     <Link
-                    to="/Registro"
+                    to="/CrudUsuario"
                     className="Link"
                    >
                     Crear Nuevo
                 </Link>
             </form>
          
-        </div>
+        </Div>
         )
     }
 }
