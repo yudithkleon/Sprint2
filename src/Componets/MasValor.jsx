@@ -3,6 +3,8 @@ import MostrarPeli from './MostrarPeli'
 import Navegador from './Navegador'
 import { Div, H1 } from '../Style/Style'
 
+import CarouselFinal from './CarouselFinal'
+
 const url= 'https://appiyudith.herokuapp.com/peliculas'
 
 export default class MasValor extends Component {
@@ -35,6 +37,7 @@ export default class MasValor extends Component {
         return (
             <Div>
                 <Navegador/>
+                <CarouselFinal/>
                 <div>
                     <H1>Peliculas Más Valoradas</H1>
                 </div>

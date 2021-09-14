@@ -8,12 +8,13 @@ import {P} from '../Style/Style'
 export default class Navegador extends Component {
     render() {
         return (
-            <Nav class="navbar-menu">
-                <nav class="navbar">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/logo-blockBuster_ttrdcc.png" width="50"></img></a>
+            <Nav className="navbar-menu" >
+                <nav className="navbar">
+                    <div className="container-fluid">
+                        
                         <div class="menu" id="menu">
                             <Ul class="navbar-nav ">
+                            <a classN="navbar-brand" href="#"><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/logo-blockBuster_ttrdcc.png" width="90"></img></a>
                                 <P class="nav-item">
                                     <Link class="nav-link" to="/">Todas</Link>
                                 </P>
@@ -36,12 +37,15 @@ export default class Navegador extends Component {
                                         name="searchTerm"
                                         placeholder="form-control"
                                         placeholder=" Pelicula a Buscar"
+                                        
                                         onChange={(e) => this.setState({searchTerm: e.target.value })}
                                         value={this.setState.searchTerm}
                                         autoFocus
+                                        
                                     />
+                                     <button class="btn btn-outline-success" type="submit"><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/buscar_w5aorc.png" ></img></button>
                                 </form>
-                                <button class="btn btn-outline-success" type="submit"><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/buscar_w5aorc.png" ></img></button>
+                                
                             </form>
                             </Ul>
                            

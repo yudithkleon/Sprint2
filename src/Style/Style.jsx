@@ -12,7 +12,7 @@ background-color: black;
 display: flex;
 justify-self: flex-end;
 justify-content: justify;
-font-family: 'cursive';
+font-family: 'fantasy';
 letter-spacing: 1px;
 margin: 1em 0 0 0;
 text-align: center;
@@ -27,8 +27,21 @@ const StyleDiv = styled.div`
 background-color: black;
 align-items: center;
 justify-content: center;
-font-family: 'cursive';
+font-family: 'fantasy';
 `;
+
+
+const StyleImg = styled.img`
+align-items: left;
+justify-content: left;
+margin: 5px;
+`;
+
+const StyleA = styled.div`
+align-items: left;
+justify-content: left;
+margin: 5px;
+`
 const StyleLista = styled.ul`
 display: flex;
 justify-self: flex-end;
@@ -49,3 +62,5 @@ export const Ul =StyleLista
 export const P = StyleP
 export const Div = StyleDiv
 export const H1= StyleH1
+export const DivA= StyleA
+export const Img= StyleImg
