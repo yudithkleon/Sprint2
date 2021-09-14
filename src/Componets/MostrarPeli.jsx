@@ -7,10 +7,10 @@ export default class MostrarPeli extends Component {
         return (
             <Div>
             <div className="container ms-3 text-center"  >
-                <div className="col">
-                    <div className="card text-white  mb-3">
+                <div className="col ">
+                    <div >
                         <img src={Poster} className="" alt="..." width="250px" height="290px" />
-                        <h7 className="card-value">{Value}/10</h7>
+                        <h5><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/estrellaA_zbroyq.png" me-6 />{Value}/10</h5>
                     </div>
                     <div className="m-2">
                         <a className="btn"

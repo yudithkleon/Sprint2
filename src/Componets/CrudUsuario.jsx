@@ -6,26 +6,11 @@ import axios from 'axios';
 const url= "https://appiyudith.herokuapp.com/peliculas"
 
 const CrudUsuario = () => {
-//     const [statedata, setStatedata]= useState
-//     const [stateform, setStateform]= useState
-
-// useEffect (()=>{
-//     getData()
-// })
-
-// async function getData() {
-//     await axios.get(url)
-//     .then(resp => {
-//         setStatedata(resp.data)
-//         console.log(resp.data)})
-//     .catch(error => {console.log(error.message)} )
-//   }
-
     return (
         <div>
         <div className="container">
             <Modal>
-                    <h1>Crear Usuario</h1>
+                    <h1>Crear Usuario de Pelicula</h1>
                     <ModalHeader style={{display: 'Usuario'}}>
                         <span style={{float: 'right'}}>x</span>
                     </ModalHeader>
@@ -43,8 +28,8 @@ const CrudUsuario = () => {
                             <label htmlFor="apellidos">Apellidos</label>
                             <input className="form-control" type="text" name="apellidos" id="apellidos" />
                             <br/>
-                            <label htmlFor="telefono">Teléfono</label>
-                            <input className="form-control" type="text" name="telefono" id="telefono" />
+                            <label htmlFor="email">Email</label>
+                            <input className="form-control" type="text" name="email" id="email" />
                             <br/>
                             <label htmlFor="celular">Celular</label>
                             <input className="form-control" type="text" name="celular" id="celular" />

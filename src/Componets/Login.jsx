@@ -3,7 +3,6 @@ import axios from 'axios'
 import md5 from 'md5'
 import {Link} from 'react-router-dom'
 import { Div } from '../Style/Style'
-import CrudUsuario from './CrudUsuario'
 import Navegador from './Navegador'
 
 const url = 'https://appiyudith.herokuapp.com/usuario'

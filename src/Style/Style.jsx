@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const StyleH1 = styled.h1`
-font-size: 20px;
+font-size: 40px;
 color:blanchedalmond;
 text-align: center;
 `;
