@@ -38,10 +38,10 @@ export default class MasValor extends Component {
             <Div>
                 <Navegador/>
                 <CarouselFinal/>
-                <div>
+                <Div>
                     <H1>Peliculas Más Valoradas</H1>
-                </div>
-                <div className="container row row-cols-1 row-cols-md-4 g-4 py-5 text-center ms-5">
+                </Div>
+                <Div className="container row row-cols-1 row-cols-md-4 g-4 py-5 text-center ms-5">
                     {
                         this.state.peli.map((movie, index) => {
                             return (
@@ -52,7 +52,7 @@ export default class MasValor extends Component {
                             )
                         })
                     }
-                </div>
+                </Div>
             </Div>
         )
     }

@@ -24,16 +24,16 @@ export default class Trailer extends Component {
   render() {
     return (
       <Div>
-        <div>
+        <Div>
           <Navegador />
-        </div>
-        <div>
+        </Div>
+        <Div>
           <H1>Estos son los Trailers</H1>
-        </div>
+        </Div>
         {this.state.peli.map((video) => {
           return (
 
-                  <div>
+                  <Div>
                       <Iframe
                                       width="560"
                                       height="315"
@@ -44,7 +44,7 @@ export default class Trailer extends Component {
                                       allowfullscreen
                                     ></Iframe>
                                     <h1>{video.Title}</h1>
-                  </div>
+                  </Div>
           );
         })}
 

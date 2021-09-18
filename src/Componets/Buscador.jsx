@@ -1,82 +1,94 @@
-import React, { Component } from 'react'
-import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
+import React, {useMemo} from 'react';
+import {useLocation} from 'react-router-dom';
+import querystring from 'query-string'
+import { AppHook } from '../Hooks/AppHook';
+import MostrarPeli from './MostrarPeli';
 
+const url = "https://appiyudith.herokuapp.com/peliculas"
 
-export default class Buscador extends Component {
-  render() {
-    return (
-      <div>
-                {/* <Modal>
-                    <h1>Modal de Peliculas</h1>
-                    <ModalHeader style={{display: 'block'}}>
-                        <span style={{float: 'right'}}>x</span>
-                    </ModalHeader>
-                    <ModalBody>
-                        <div className="form-group">
-                            <label htmlFor="id">{Title}</label>
-                            <input className="form-control" type="text" name="id" id="id" readOnly />
-                            <br/>
-                            <label htmlFor="documento">{Description}</label>
-                            <input className="form-control" type="text" name="description" id="documento" />
-                            <br/>
-                            <label htmlFor="nombres">{Year}</label>
-                            <input className="form-control" type="text" name="nombres" id="nombres" />
-                            <br/>
-                            <label htmlFor="apellidos">{Value}</label>
-                            <input className="form-control" type="text" name="apellidos" id="apellidos" />
-                            <br/>
-                            <label htmlFor="telefono">{Type}</label>
-                            <input className="form-control" type="text" name="telefono" id="telefono" />
-                            <br/>
-                            <label htmlFor="celular">Celular</label>
-                            <input className="form-control" type="text" name="celular" id="celular" />
-                            <br/>
-                                <input 
-                            id="fileSelector"
-                            type="file"
-                            name="file"
-                            />
+const Buscador = ({history}) => {
+   
+//     const location = useLocation();
+//     const {q = ''} = querystring.parse(location.search);
+//     console.log(q);
 
-                            <button className="btn btn-success"
-                            >{Trailer}</button>
+//   const [formValues, handleInputChange] = AppHook({
+//       searchText: q
+//   })
 
-                            <input 
-                            type="text"
-                            name="image"
-                            id="image"
-                            />
+//   const {searchText} = formValues;
 
-                        </div>
+//   const moviesFiltered = useMemo(() => getMoviesByName(q), [q]);
 
-                    </ModalBody>
-                    <ModalFooter>
-                      
-                        <button className="btn btn-success">
-                            Insertar
-                        </button>
-                        <button className="btn btn-primary"
-                        >
-                            Actualizar
-                        </button>
-                        <button className="btn btn-danger"
-                           >
-                            Cancelar
-                        </button>
-                    </ModalFooter>
-                </Modal>
-                <Modal>
-                    <ModalBody>
-                        Está seguro de eliminar el superheroe
-                    </ModalBody>
-                    <ModalFooter>
-                        <button className="btn btn-danger"
-                       >Sí</button>
-                        <button className="btn btn-secundary"
-                       >No</button>
-                    </ModalFooter>
-                </Modal> */}
-      </div>
-    )
-  }
+//   const handleSearch = (e) =>{
+//       e.preventDefault();
+//       history.push(`?q=${searchText}`)
+//   }
+
+//   const getMoviesByName = ( title = '' ) => {
+
+//     if ( title === '' ) {
+//         return [];
+//     }
+
+//    title =title.toLocaleLowerCase();
+//     return movies.filter( movie => movie.title.toLocaleLowerCase().includes(title )  );
+
+// }
+
+//     return (
+//         <div>
+//              <h1>Search Screen</h1>
+//             <hr />
+//             <div className="row">
+//                 <div className="col-5">
+//                     <h4> Search Form </h4>
+//                     <hr />
+//                     <form onSubmit={handleSearch}>
+//                         <input 
+//                             type="text"
+//                             placeholder="Find your hero"
+//                             className="form-control"
+//                             name="searchText"
+//                             autoComplete="off"
+//                             name="searchText"
+//                             value={searchText}
+//                             onChange={handleInputChange}
+//                         />
+//                         <button
+//                             type="submit"
+//                             className="btn m-1 btn-block btn-outline-primary"
+//                         >
+//                             Search...
+//                         </button>
+//                     </form>
+//                 </div>
+//                 <div className="col-7">
+//                     <h4> Results </h4>
+//                     <hr />
+//                     {
+//                         (q==='')
+//                         && <div className="alert alert-info">Search a movie</div>
+//                     }
+//                     {
+//                         (q !== '' && moviesFiltered.length===0)
+//                         && <div className="alert alert-danger">
+//                              There is no a movie with {q}
+//                         </div>
+//                     }
+//                     {
+//                         moviesFiltered.map(movie => (
+//                             <MostrarPeli key={movie.id} 
+//                             {...movie}/>
+//                         ))
+//                     }
+//                 </div>
+//             </div>
+//         </div>
+//     )
+
 }
+
+export default Buscador
+
 

@@ -1,0 +1,19 @@
+{
+    "usuario":
+    [
+    {
+      "id": 1,
+      "apellido": "Garcia",
+      "nombre": "Silvia",
+      "email": "garcia.s091@gmail.com",
+      "password": "827ccb0eea8a706c4c34a16891f84e7b"
+    },
+    {
+        "id": 2,
+        "apellido": "Leon",
+        "nombre": "Yudith",
+        "email": "yudith@gmail.com",
+        "password": "827ccb0eea8a706c4c34a16891f84e7b"
+    }
+  ]
+}

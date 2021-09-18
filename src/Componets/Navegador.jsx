@@ -30,6 +30,9 @@ export default class Navegador extends Component {
                                 <P class="nav-item">
                                     <Link class="nav-link" to="/Trailer">Trailers</Link>
                                 </P>
+                                <P class="nav-item">
+                                    <Link class="nav-link" to="/Peliculas">Add</Link>
+                                </P>
                                 <form class="d-flex">
                                 <form>
                                     <input
@@ -41,9 +44,9 @@ export default class Navegador extends Component {
                                         onChange={(e) => this.setState({searchTerm: e.target.value })}
                                         value={this.setState.searchTerm}
                                         autoFocus
-                                        
+                                   
                                     />
-                                     <button class="btn btn-outline-success" type="submit"><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/buscar_w5aorc.png" ></img></button>
+                                     <Link to="/Buscador"><button class="btn btn-outline-success" type="submit"><img src="https://res.cloudinary.com/danimel/image/upload/v1630787233/sprint2/buscar_w5aorc.png" /></button></Link>
                                 </form>
                                 
                             </form>

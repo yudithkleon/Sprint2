@@ -41,7 +41,7 @@ const StyleA = styled.div`
 align-items: left;
 justify-content: left;
 margin: 5px;
-`
+`;
 const StyleLista = styled.ul`
 display: flex;
 justify-self: flex-end;
@@ -56,6 +56,14 @@ margin: 20px;
 padding: 20px;
 `;
 
+const StyleForm = styled.form`
+background-color: black;
+align-items: center;
+justify-content: center;
+font-family: 'fantasy';
+`; 
+
+export const Form = StyleForm
 export const Iframe = StyleIframe
 export const Nav = Style
 export const Ul =StyleLista

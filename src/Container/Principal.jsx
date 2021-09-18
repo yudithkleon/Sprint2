@@ -39,18 +39,18 @@ export default class Principal extends Component {
             <Div className="todo">
                 <Navegador/>
                 <CarouselFinal/>
-               <div className="container row row-cols-1 row-cols-md-4 g-4 py-5 text-center ms-5">
+               <Div className="container row row-cols-1 row-cols-md-4 g-4 py-5 text-center ms-5">
                     {
                         this.state.peli.map((movie, index) => {
                             return (
-                                <MostrarPeli
+                                    <MostrarPeli
                                     key={index}
                                     movies={movie}
                                 />
                             )
                         })
                     }
-                </div>
+                </Div>
             </Div>
 
         )

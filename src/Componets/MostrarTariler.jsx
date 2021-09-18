@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Carousel } from 'react-bootstrap'
 import Buscador from './Buscador'
 import Navegador from './Navegador'
+import { Div } from '../Style/Style';
 
 const url = "http://localhost:3000/peliculas"
 
@@ -33,10 +34,10 @@ export default class MostrarTariler extends Component {
         }
            
         return (
-            <div>
+            <Div>
                 <Navegador/>
               
-                 <div>
+                 <Div>
                   {
                         this.state.peli.map((movie, index) => {
                             return (
@@ -47,9 +48,9 @@ export default class MostrarTariler extends Component {
                             )
                         })
                     }
-                  </div>
+                  </Div>
    
-            </div>
+            </Div>
         )
 }
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const AppHooks = ( initialState = {} ) => {
+export const AppHook = ( initialState = {} ) => {
     
     const [formValue, setValues] = useState(initialState);
     console.log("hook",initialState);
@@ -18,3 +18,5 @@ export const AppHooks = ( initialState = {} ) => {
 
     return [ formValue, handleInputChange, reset ];
 }
+
+
